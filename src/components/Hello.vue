@@ -17,7 +17,11 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
-    <HelloChild />
+    <input v-model="message" placeholder="edit me">
+    <p>Message is: {{ message }}</p>
+    <!-- 父组件向子组件传值时，要在子组件入口的地方绑定需要传值的是数据，
+    格式为(: => v-bind:, data => 传值的属性名， 'message' =>传递的值) -->
+    <HelloChild :data='message' />
   </div>
 </template>
 
@@ -30,7 +34,8 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      message: ''
     }
   }
 }

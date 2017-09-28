@@ -1,15 +1,15 @@
 <template>
   <div class="child">
-    <h2>我是hello vue的子组件哦！！！</h2>
+    <h2>我是hello vue的子组件哦！！！{{data}}</h2>
   </div>
 </template>
-
 <script>
 export default {
   name: 'child',
+  props: ['data'],
   data () {
     return {
-      // msg: 'Almost remember you are absolutely unique'
+      // message: ''
     }
   }
 }
