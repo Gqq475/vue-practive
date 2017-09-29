@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Demo from '@/components/Demo'
 import Game from '@/components/Game'
+import Count from '@/components/Count'
 Vue.use(Router)
 
 export default new Router({
@@ -12,6 +13,11 @@ export default new Router({
       path: '/',
       name: 'Hello',
       component: Hello
+    },
+    {
+      path: '/count',
+      name: 'Count',
+      component: Count
     },
     {
       path: '/game',
