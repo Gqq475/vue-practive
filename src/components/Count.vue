@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>{{counter}}</h3>
+    <h3>{{counter.num}}</h3>
     <button @click="add">+</button>
     <button @click="reduces">-</button>
   </div>
@@ -12,12 +12,12 @@ import {mapState} from 'vuex';
     // 第一种得到store中state值的写法
     // computed:{
     //   counter() {
-    //       return this.$store.state.counter.num
+    //       return this.$store.state.counter
     //   }
     // },
     // 第二种得到store中state值的写法
     // computed: mapState({
-    //   counter: state => state.counter.num  //理解为传入state对象，修改state.counter属性
+    //   counter: state => state.counter  //理解为传入state对象，修改state.counter属性
     // }),
     // 第三种得到store中state的写法
     computed: mapState(["counter"]),
