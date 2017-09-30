@@ -1,16 +1,16 @@
 <template>
   <div class="game">
     <h2>来玩个游戏吧！！！！</h2>
-    <Table />
+    <NewTable />
   </div>
 </template>
 
 <script>
-import Table from './Table.vue' // 引入子组件
+import NewTable from './Table.vue' // 引入子组件
 export default {
   name: 'game',
   components: { // 引入子组件
-    Table
+    NewTable
   },
   data () {
     return {
