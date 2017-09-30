@@ -17,6 +17,7 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <button @click="step">跳转页面喽</button>
     <input v-model="message" placeholder="edit me">
     <p>Message is: {{ message }}</p>
     <!-- 父组件向子组件传值时，要在子组件入口的地方绑定需要传值的是数据，
@@ -36,6 +37,16 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       message: ''
+    }
+  },
+  methods: {
+    step () {
+      // 路由跳转
+      this.$router.push({
+        path: '/demo',
+        // '要跳转的路径的 name,在 router 文件夹下的 index.js 文件内找',
+        name: 'Demo',
+      })
     }
   }
 }
