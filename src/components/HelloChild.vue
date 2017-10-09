@@ -1,6 +1,7 @@
 <template>
   <div class="child">
     <h2>我是hello vue的子组件哦！！！{{data}}</h2>
+    <input v-model="data" placeholder="edit me">
   </div>
 </template>
 <script>
