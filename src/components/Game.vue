@@ -1,6 +1,6 @@
 <template>
   <div class="game">
-    <h2>来玩个游戏吧！！！！</h2>
+    <button class="btn" @click="step">来玩个游戏吧！！！！</button>
     <NewTable />
   </div>
 </template>
@@ -16,6 +16,16 @@ export default {
     return {
       // msg: 'Almost remember you are absolutely unique'
     }
+  },
+  methods: {
+    step() {
+      // 路由跳转
+      this.$router.push({
+        path: '/count',
+        // '要跳转的路径的 name,在 router 文件夹下的 index.js 文件内找',
+        name: 'Count',
+      })
+    }
   }
 }
 </script>
@@ -25,5 +35,7 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
-
+.btn {
+  margin-bottom: 20px;
+}
 </style>

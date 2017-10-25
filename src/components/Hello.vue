@@ -2,14 +2,6 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
     <h2>Ecosystem</h2>
     <ul>
       <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
@@ -17,12 +9,13 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
-    <button @click="step">跳转页面喽</button>
-    <input v-model="message" placeholder="edit me">
+    <button @click="step">点击按钮跳转页面喽</button>
+    <p>我是父组件中的一个变量，传给子组件中的input。</p>
+    <p>子组件输入的值变化了以后我的值也就变了。</p>
     <p>Message is: {{ message }}</p>
     <!-- 父组件向子组件传值时，要在子组件入口的地方绑定需要传值的是数据，
     格式为(: => v-bind:, data => 传值的属性名， 'message' =>传递的值) -->
-    <HelloChild :data='message' />
+    <HelloChild v-model="message" />
   </div>
 </template>
 
@@ -40,6 +33,9 @@ export default {
     }
   },
   methods: {
+    // inputData(data) {
+    //   this.message = data
+    // },
     step () {
       // 路由跳转
       this.$router.push({
@@ -72,3 +68,6 @@ a {
   color: #42b983;
 }
 </style>
+
+
+body .bod .content .title button .btn1 {}
